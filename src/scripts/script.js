@@ -37,8 +37,15 @@ const btnNome = document.querySelector('#nome-pet')
 const listaAdocao = document.querySelector('#lista-adocao')
 
 btnCadastrar.addEventListener('click', () =>{
-    listaAdocao.innerHTML += '<article class="card-adocao"><h3>🐾</h3></article>'
-    listaAdocao
+    if (btnNome.value == ""){
+        btnCadastrar.textContent= "Você precisa colocar um nome!"
+        btnCadastrar.classList.add('erro')
+    } else{
+        listaAdocao.innerHTML += `<article class="card-adocao"><h3>🐾 ${btnNome.value}</h3></article>`
+        btnCadastrar.textContent= "Cadastrar Pet"
+        btnCadastrar.classList.remove('erro')
+        btnNome.value = ''
+    }
 })
 
 // ======= Missão 5 =======

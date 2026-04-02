@@ -114,7 +114,6 @@ input {
     border-color: white;
 }
 
-
 /* Missão 4: Estilo do card de adoção (.card-adocao) */
 /* Dica: Adicione uma linha de borda de 2px solid #ff9f43, um espaçamento interno de 15px, pontas arredondadas de 8px e cor de fundo branca (#fff) */
 
@@ -126,3 +125,17 @@ input {
     border-radius: 8px;
     background-color: white;   
 }
+
+.card-adocao h3{
+    text-transform: capitalize;
+}
+
+/* Extras! */
+.erro{
+    background-color: #aa1e0e;
+    font-weight: 750;
+    transform: translateY(-3px)
+}
+
+.erro:active{transform: translateY(-10px)}
+.erro:hover{background-color: #95190b;}
